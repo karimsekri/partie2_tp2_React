@@ -10,7 +10,7 @@ function App() {
   const [cptP, setcptP] = useState(0);
 
   const incrementerLes2Compteurs = useCallback(
-    () => setcptP(cptP + 1 ) ,[cptP]
+    () => setcptP( cptP + 1 ) ,[cptP]
 );
 
   return (
