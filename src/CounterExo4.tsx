@@ -23,11 +23,26 @@ const CounterExo4 = (props: { cpt: number }) => {
 
         }, [compteur, props.cpt]
     );
+
+    const minValue = useMemo(
+        () => {
+            if (compteur + props.cpt > 0) {
+                return compteur + props.cpt
+            } else {
+                
+                return 0
+            }
+
+        }, [compteur, props.cpt]
+    );
+
+
     return (
         <div>
-            <h2>Counter : {maxValue} </h2>
-            {/* <h2>Counter : {compteur} </h2>
-            <h2>Counter : {props.cpt} </h2> */}
+            <h2> Counter : {maxValue < 0 ? (minValue):(maxValue)} </h2>
+            <h2> minValue : {minValue} </h2>
+            <h2>compteur : {compteur} </h2>
+            <h2>props.cpt : {props.cpt} </h2>
             <button onClick={incrementeCompteur}>incrementer</button>
             <button onClick={decrementeCompteur}>decrementer</button>
         </div>
