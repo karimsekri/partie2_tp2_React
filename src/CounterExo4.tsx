@@ -38,6 +38,7 @@ const CounterExo4 = (props: { cpt: number }) => {
 
 
     return (
+        
         <div>
             <h2> Counter : {maxValue < 0 ? (minValue):(maxValue)} </h2>
             <h2> minValue : {minValue} </h2>
